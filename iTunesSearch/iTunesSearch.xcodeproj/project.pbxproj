@@ -9,20 +9,19 @@
 /* Begin PBXBuildFile section */
 		0EF25169243A8999008DC16E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25168243A8999008DC16E /* AppDelegate.swift */; };
 		0EF2516B243A8999008DC16E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF2516A243A8999008DC16E /* SceneDelegate.swift */; };
-		0EF2516D243A8999008DC16E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF2516C243A8999008DC16E /* ViewController.swift */; };
 		0EF25170243A8999008DC16E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF2516E243A8999008DC16E /* Main.storyboard */; };
 		0EF25172243A899C008DC16E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0EF25171243A899C008DC16E /* Assets.xcassets */; };
 		0EF25175243A899C008DC16E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0EF25173243A899C008DC16E /* LaunchScreen.storyboard */; };
 		0EF2517D243A8A3E008DC16E /* SearchResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF2517C243A8A3E008DC16E /* SearchResult.swift */; };
 		0EF2517F243AC1D6008DC16E /* ResultType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF2517E243AC1D6008DC16E /* ResultType.swift */; };
 		0EF25182243AC234008DC16E /* SearchResultsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF25181243AC234008DC16E /* SearchResultsController.swift */; };
+		0EF251B5243BC54E008DC16E /* SearchResultsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0EF251B4243BC54E008DC16E /* SearchResultsTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		0EF25165243A8999008DC16E /* iTunesSearch.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iTunesSearch.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0EF25168243A8999008DC16E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0EF2516A243A8999008DC16E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		0EF2516C243A8999008DC16E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0EF2516F243A8999008DC16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0EF25171243A899C008DC16E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0EF25174243A899C008DC16E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -30,6 +29,7 @@
 		0EF2517C243A8A3E008DC16E /* SearchResult.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResult.swift; sourceTree = "<group>"; };
 		0EF2517E243AC1D6008DC16E /* ResultType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultType.swift; sourceTree = "<group>"; };
 		0EF25181243AC234008DC16E /* SearchResultsController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchResultsController.swift; sourceTree = "<group>"; };
+		0EF251B4243BC54E008DC16E /* SearchResultsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SearchResultsTableViewController.swift; path = iTunesSearch/Storyboards/SearchResultsTableViewController.swift; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,7 +102,7 @@
 		0EF251B1243BBC15008DC16E /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				0EF2516C243A8999008DC16E /* ViewController.swift */,
+				0EF251B4243BC54E008DC16E /* SearchResultsTableViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -188,10 +188,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				0EF2517F243AC1D6008DC16E /* ResultType.swift in Sources */,
-				0EF2516D243A8999008DC16E /* ViewController.swift in Sources */,
 				0EF25169243A8999008DC16E /* AppDelegate.swift in Sources */,
 				0EF2517D243A8A3E008DC16E /* SearchResult.swift in Sources */,
 				0EF25182243AC234008DC16E /* SearchResultsController.swift in Sources */,
+				0EF251B5243BC54E008DC16E /* SearchResultsTableViewController.swift in Sources */,
 				0EF2516B243A8999008DC16E /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
