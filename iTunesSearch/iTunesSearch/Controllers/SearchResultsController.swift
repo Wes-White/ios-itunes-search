@@ -26,25 +26,26 @@ final class SearchResultsController {
     
 //  Search Method
     
-    func performSearch (searchTerm: String, resultType: ResultType, completion: @escaping (Error?) -> Void) {
+    func performSearch (searchTerm: String, resultType: ResultType, completion: @escaping () -> Void) {
         
         task?.cancel()
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
-        
-        let searchQueryTerm = URLQueryItem(name: "search", value: searchTerm)
-        //NOT SURE WHAT THIS IS DOING
-        urlComponents?.queryItems = [searchQueryTerm]
+        let searchTermQueryItem = URLQueryItem(name: "term", value: searchTerm)
+        let searchTermQueryItem2 = URLQueryItem(name: "media", value: resultType.rawValue)
+
+        urlComponents?.queryItems = [searchTermQueryItem, searchTermQueryItem2]
         
         //Make sure something is there
         guard let requestURL = urlComponents?.url else {
             NSLog("The Request returned nil")
-            completion(NSError())
+            completion()
             return
         }
         
         //setting our get request
         var request = URLRequest(url: requestURL)
         request.httpMethod = HTTPMethod.get.rawValue
+        print(request)
         
         
         task = URLSession.shared.dataTask(with: request) { [weak self ] data, _, error in
@@ -73,7 +74,7 @@ final class SearchResultsController {
                 NSLog("Unable to decode the data into an instance of iTunesSearch: \(error.localizedDescription)")
             }
             
-            completion(NSError())
+            completion()
         }
         
         task?.resume()
